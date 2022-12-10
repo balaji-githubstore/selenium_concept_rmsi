@@ -1,0 +1,13 @@
+package com.rmsi.test;
+
+import org.testng.annotations.Test;
+
+public class LoginUITest {
+	
+	@Test
+	public void validateTitleTest()
+	{
+		System.out.println("title test");
+	}
+
+}

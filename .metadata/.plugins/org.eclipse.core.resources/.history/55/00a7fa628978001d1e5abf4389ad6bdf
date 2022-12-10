@@ -1,0 +1,46 @@
+package com.rmsi.pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class LoginPage {
+	
+	private WebDriver driver;
+	
+	public LoginPage(WebDriver driver)
+	{
+		
+	}
+	
+	public void enterUsername(String username)
+	{
+		driver.findElement(By.id("authUser")).sendKeys(username);
+	}
+	
+	
+	public void enterPassword(String password)
+	{
+		
+	}
+
+	public void selectLanguage(String language)
+	{
+		
+	}
+	
+	public void clickOnLogin()
+	{
+		
+	}
+	
+	public String getLoginPageTitle()
+	{
+		return "";
+	}
+	
+	public String getLoginPageHeader()
+	{
+		return "";
+	}
+	
+}

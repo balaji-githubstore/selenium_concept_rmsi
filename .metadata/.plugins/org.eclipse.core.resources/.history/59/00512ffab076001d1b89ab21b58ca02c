@@ -1,0 +1,10 @@
+package com.rmsi.alert;
+
+public class Demo1Alert {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

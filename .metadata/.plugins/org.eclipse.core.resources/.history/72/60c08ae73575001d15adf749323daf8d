@@ -1,0 +1,12 @@
+package com.rmsi.basics;
+
+public class Demo1LaunchBrowser {
+
+	public static void main(String[] args) {
+		
+		
+		
+
+	}
+
+}

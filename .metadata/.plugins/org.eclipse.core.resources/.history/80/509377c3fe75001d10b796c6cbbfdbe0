@@ -1,0 +1,14 @@
+package com.rmsi.runner;
+
+import java.util.Scanner;
+
+import com.rmsi.employee.Employee;
+
+public class Demo1 {
+
+	public static void main(String[] args) {
+		
+		//Scanner scan=
+		
+	}
+}

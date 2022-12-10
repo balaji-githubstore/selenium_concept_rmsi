@@ -1,0 +1,45 @@
+package com.rmsi.test;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.rmsi.base.AutomationWrapper;
+
+public class LoginTest extends AutomationWrapper {
+	
+	
+	//create dataprovider and load 
+	//admin,pass,English (Indian),OpenEMR
+	//physician,physician,English (Indian),OpenEMR
+	
+
+
+	@Test
+	public void validLoginTest(String username,String password,String language,String expectedTitle)
+	{
+		driver.findElement(By.id("authUser")).sendKeys(username);
+		driver.findElement(By.id("clearPass")).sendKeys(password);
+		Select selectLan=new Select(driver.findElement(By.xpath("//select[@name='languageChoice']")));
+		selectLan.selectByVisibleText(language);
+		driver.findElement(By.cssSelector("#login-button")).click();
+		
+		String actualTitle=driver.getTitle();
+		Assert.assertEquals(actualTitle, expectedTitle);
+	}
+	
+	@Test
+	public void invalidLoginTest()
+	{
+		driver.findElement(By.id("authUser")).sendKeys("john");
+		driver.findElement(By.id("clearPass")).sendKeys("john123");
+		Select selectLan=new Select(driver.findElement(By.xpath("//select[@name='languageChoice']")));
+		selectLan.selectByVisibleText("English (Indian)");
+		driver.findElement(By.cssSelector("#login-button")).click();
+		
+		String actualError= driver.findElement(By.xpath("//div[contains(@class,'login-failure')]")).getText();
+		Assert.assertEquals(actualError, "Invalid username or password");
+	}
+	
+}

@@ -1,0 +1,18 @@
+package com.rmsi.runner;
+
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
+
+@CucumberOptions(
+		//features = {"src/test/resources/feature/Login.feature","src/test/resources/feature/Patient.feature"}
+		features = {"src/test/resources/Feature"}
+		,glue = {"com.rmsi.steps","com.rmsi.base"}
+		,monochrome = true
+		,publish = false
+		,plugin = {"html:target/cucumber-report.html"}
+		,tags = "@patient"
+		)
+
+public class RunnerTest extends AbstractTestNGCucumberTests {
+
+}

@@ -1,0 +1,14 @@
+package com.rmsi.employee;
+
+public class RunnerTest {
+	
+	public static void main(String[] args) {
+		
+		Employee.companyName="RMSI";
+		Employee.companyLocation="Chennai";
+		
+		
+		
+	}
+
+}

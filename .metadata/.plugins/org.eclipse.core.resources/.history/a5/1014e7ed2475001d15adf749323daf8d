@@ -1,0 +1,10 @@
+package com.rmsi.employee;
+
+public class Employee {
+	
+	int a=0;
+	char letter='U';
+
+	String name="Balaji";
+
+}

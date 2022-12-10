@@ -1,0 +1,22 @@
+package com.rmsi.framedemo;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Demo1Frame {
+
+	public static void main(String[] args) {
+		
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+
+		driver.get("https://netbanking.hdfcbank.com/netbanking");
+
+		//enter customer id as test123
+		driver.findElement(By.name("fldLoginUserId")).sendKeys("test123");
+	}
+}

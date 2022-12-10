@@ -1,0 +1,13 @@
+package com.rmsi.test;
+
+import org.testng.annotations.Test;
+
+public class DemoTest {
+	
+	@Test
+	public void validTest(String username,String password)
+	{
+		System.out.println("valid"+username+password);
+	}
+
+}

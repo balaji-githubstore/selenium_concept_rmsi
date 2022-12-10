@@ -1,0 +1,13 @@
+package com.rmsi.test;
+
+import org.junit.Test;
+
+public class LoginUITest {
+	
+	@Test
+	public void validateTitleTest()
+	{
+		
+	}
+
+}

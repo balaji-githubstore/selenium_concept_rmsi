@@ -1,0 +1,7 @@
+Feature: Patient
+  In order to maintain the patient records 
+  As an admin
+  I want to add,edit,delete the patient detials in portal
+
+  
+  

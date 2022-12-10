@@ -1,0 +1,40 @@
+package com.rmsi.test;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.rmsi.base.AutomationWrapper;
+import com.rmsi.pages.LoginPage;
+import com.rmsi.utilities.DataUtils;
+
+
+public class LoginTest extends AutomationWrapper {
+
+	@Test(dataProvider = "commonDataProvider",dataProviderClass = DataUtils.class)
+	public void validLoginTest(String username, String password, String language, String expectedTitle) {
+		
+		LoginPage loginPage=new LoginPage(driver);
+		loginPage.enterUsername(username);
+		loginPage.enterPassword(password);
+		loginPage.selectLanguage(language);
+		driver.findElement(By.cssSelector("#login-button")).click();
+
+		String actualTitle = driver.getTitle();
+		Assert.assertEquals(actualTitle, expectedTitle);
+	}
+
+	@Test(dataProvider = "commonDataProvider",dataProviderClass = DataUtils.class)
+	public void invalidLoginTest(String username,String password,String language,String expectedError) {
+		driver.findElement(By.id("authUser")).sendKeys(username);
+		driver.findElement(By.id("clearPass")).sendKeys(password);
+		Select selectLan = new Select(driver.findElement(By.xpath("//select[@name='languageChoice']")));
+		selectLan.selectByVisibleText(language);
+		driver.findElement(By.cssSelector("#login-button")).click();
+
+		String actualError = driver.findElement(By.xpath("//div[contains(@class,'login-failure')]")).getText();
+		Assert.assertEquals(actualError, expectedError);
+	}
+
+}

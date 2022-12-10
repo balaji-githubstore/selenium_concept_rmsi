@@ -1,0 +1,20 @@
+package com.rmsi.runner;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Demo2 {
+	
+	public static void main(String[] args) {
+
+	    
+	    List<String> lists=new ArrayList<String>();
+	    lists.add("red");
+	    lists.add("green");
+	    
+	   
+	}
+
+}

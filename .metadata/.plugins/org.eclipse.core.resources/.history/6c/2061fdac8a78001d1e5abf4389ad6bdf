@@ -1,0 +1,5 @@
+package com.rmsi.pages;
+//handle element inside Search or Add Patient
+public class SearchOrAddPatientPage {
+
+}

@@ -1,0 +1,37 @@
+package com.rmsi.pages;
+
+public class LoginPage {
+	
+	
+	public static void enterUsername(String username)
+	{
+		
+	}
+	
+	
+	public static void enterPassword(String password)
+	{
+		
+	}
+
+	public static void selectLanguage(String language)
+	{
+		
+	}
+	
+	public static void clickOnLogin()
+	{
+		
+	}
+	
+	public static String getLoginPageTitle()
+	{
+		return "";
+	}
+	
+	public static String getLoginPageHeader()
+	{
+		return "";
+	}
+	
+}

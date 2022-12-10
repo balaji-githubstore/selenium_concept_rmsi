@@ -1,0 +1,35 @@
+package com.rmsi.test;
+
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+//no need to create 
+//will delete this class
+public class DemoTest {
+	
+	
+	@DataProvider
+	public String[][] validData()
+	{
+		String[][] arr=new String[3][2];
+		//i-> number of test case 
+		//j->number of parameters 
+		
+		arr[0][0]="john";
+		arr[0][1]="john123";
+		
+		arr[1][0]="saul";
+		arr[1][1]="saul123";
+		
+		arr[2][0]="kim";
+		arr[2][1]="kim123";
+		
+		return arr;
+	}
+	
+	@Test(dataProvider = "validData")
+	public void validTest(String username,String password)
+	{
+		System.out.println("valid"+username+password);
+	}
+
+}

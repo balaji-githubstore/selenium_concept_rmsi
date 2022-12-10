@@ -1,0 +1,11 @@
+package com.rmsi.pages;
+
+public class LoginPage {
+	
+	
+	public static void enterUsername(String username)
+	{
+		
+	}
+
+}

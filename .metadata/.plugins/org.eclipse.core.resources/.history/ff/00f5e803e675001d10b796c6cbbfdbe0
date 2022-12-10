@@ -1,0 +1,19 @@
+package com.rmsi.runner;
+
+import java.util.Scanner;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import com.rmsi.employee.Employee;
+
+public class Demo1 {
+
+	public static void main(String[] args) {
+
+		// Scanner scan=
+		WebDriver driver = new ChromeDriver();
+
+		driver.get("http://facebook.com/");
+	}
+}

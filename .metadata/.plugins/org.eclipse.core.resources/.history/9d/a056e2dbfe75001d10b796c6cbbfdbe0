@@ -1,0 +1,20 @@
+package com.rmsi.runner;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import com.rmsi.employee.Employee;
+
+public class Demo1 {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Integer> numbers=new ArrayList<Integer>();
+		
+		numbers.add(10);
+		numbers.add(10);
+		
+		int a=10;
+		Integer b=10;
+	}
+}

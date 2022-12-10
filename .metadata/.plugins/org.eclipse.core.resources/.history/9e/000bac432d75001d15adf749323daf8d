@@ -1,0 +1,21 @@
+package com.rmsi.employee;
+
+public class RunnerTest {
+	
+	public static void main(String[] args) {
+		
+		Employee.companyName="RMSI";
+		Employee.companyLocation="Chennai";
+		
+		Employee.companyName="RMSI pvt ltd";
+		
+		Employee emp1=new Employee();
+		
+		emp1.empId=101;
+		emp1.empName="Saul";
+		emp1.empSalary=9000;
+		
+		Employee emp2=new Employee();
+		
+	}
+}

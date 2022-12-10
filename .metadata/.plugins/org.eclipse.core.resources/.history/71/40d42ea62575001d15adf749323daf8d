@@ -1,0 +1,11 @@
+package com.rmsi.employee;
+
+public class Employee {
+	public int empId;
+	public String empName;
+	public double empSalary;
+	
+	
+
+
+}

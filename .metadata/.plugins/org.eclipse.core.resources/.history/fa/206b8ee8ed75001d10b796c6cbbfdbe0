@@ -1,0 +1,21 @@
+package com.rmsi.basics;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Demo3SignUp {
+
+	public static void main(String[] args) {
+		
+		WebDriver driver=new ChromeDriver();
+		
+		driver.get("https://www.facebook.com/");
+		
+		//click on Create New Account
+		driver.findElement(By.linkText("Create New Account")).click();
+		
+		//enter firstname as john
+	}
+
+}

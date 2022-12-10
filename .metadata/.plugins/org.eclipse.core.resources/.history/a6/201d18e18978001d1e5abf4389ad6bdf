@@ -1,0 +1,11 @@
+package com.rmsi.pages;
+//handle all the menu
+public class MainPage {
+
+	
+	public String getMainPageTitle()
+	{
+		
+	}
+	
+}
